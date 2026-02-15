@@ -16,6 +16,7 @@
     <div class="card">
       <h2>Write a letter</h2>
 
+      <!-- Mood -->
       <select id="mood">
         <option value="">Mood (optional)</option>
         <option>Hope</option>
@@ -25,12 +26,33 @@
         <option>Confession</option>
       </select>
 
+      <!-- To -->
+      <input
+        type="text"
+        id="to_name"
+        placeholder="To (optional)"
+      />
+
+      <!-- From -->
+      <input
+        type="text"
+        id="from_name"
+        placeholder="From (your name)"
+      />
+
+      <!-- Anonymous toggle -->
+      <label class="anonToggle">
+        <input type="checkbox" id="anon" checked>
+        Stay anonymous
+      </label>
+
+      <!-- Message -->
       <textarea
         id="content"
         placeholder="Write what you’ve been holding in..."
       ></textarea>
 
-      <button id="submit">Publish anonymously</button>
+      <button id="submit">Publish letter</button>
       <p id="status" class="status"></p>
 
       <p class="note">
