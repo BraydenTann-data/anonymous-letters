@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anonymous Letters</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Anonymous Letters</h1>
-  <p>A safe place to speak freely.</p>
+  <div class="container">
+    <h1>Anonymous Letters</h1>
+    <p class="subtitle">A quiet place to speak and be heard.</p>
 
-  <textarea placeholder="Write your thoughts..."></textarea>
-  <br><br>
-  <button>Send anonymously</button>
+    <!-- WRITE LETTER -->
+    <div class="card">
+      <h2>Write a letter</h2>
+
+      <select id="mood">
+        <option value="">Mood (optional)</option>
+        <option>Hope</option>
+        <option>Stress</option>
+        <option>Loneliness</option>
+        <option>Gratitude</option>
+        <option>Confession</option>
+      </select>
+
+      <textarea
+        id="content"
+        placeholder="Write what you’ve been holding in..."
+      ></textarea>
+
+      <button id="submit">Publish anonymously</button>
+      <p id="status" class="status"></p>
+
+      <p class="note">
+        Please avoid sharing personal information like names, phone numbers or addresses.
+      </p>
+    </div>
+
+    <!-- READ LETTERS -->
+    <div class="card">
+      <h2>Voices from others</h2>
+      <div id="letters"></div>
+    </div>
+  </div>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
-
 </html>
